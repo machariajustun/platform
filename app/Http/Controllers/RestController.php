@@ -378,6 +378,7 @@ abstract class RESTController extends Controller {
             $type = 'json';
         } else {
             //...Get the requested response format, use JSON for default
+            // @todo should just Accept header
             $type = strtolower($request->query('format')) ?: 'json';
         }
 
