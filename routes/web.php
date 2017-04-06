@@ -35,27 +35,27 @@ $app->group(['prefix' => $apiBase], function () use ($app) {
     });
 });
 
-$app->get('{anything:.*}', function ($path) use ($app) {
-    return \Request::factory($path, array(), false)
-        ->execute()
-        ->send_headers(true)
-        ->body();
-});
-$app->post('{anything:.*}', function ($path) use ($app) {
-    return \Request::factory($path, array(), false)
-        ->execute()
-        ->send_headers(true)
-        ->body();
-});
-$app->put('{anything:.*}', function ($path) use ($app) {
-    return \Request::factory($path, array(), false)
-        ->execute()
-        ->send_headers(true)
-        ->body();
-});
-$app->delete('{anything:.*}', function ($path) use ($app) {
-    return \Request::factory($path, array(), false)
-        ->execute()
-        ->send_headers(true)
-        ->body();
-});
+// $app->get('{anything:.*}', function ($path) use ($app) {
+//     return \Request::factory($path, array(), false)
+//         ->execute()
+//         ->send_headers(true)
+//         ->body();
+// });
+// $app->post('{anything:.*}', function ($path) use ($app) {
+//     return \Request::factory($path, array(), false)
+//         ->execute()
+//         ->send_headers(true)
+//         ->body();
+// });
+// $app->put('{anything:.*}', function ($path) use ($app) {
+//     return \Request::factory($path, array(), false)
+//         ->execute()
+//         ->send_headers(true)
+//         ->body();
+// });
+// $app->delete('{anything:.*}', function ($path) use ($app) {
+//     return \Request::factory($path, array(), false)
+//         ->execute()
+//         ->send_headers(true)
+//         ->body();
+// });

@@ -51,9 +51,9 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
-//    Ushahidi\App\Http\Middleware\ExampleMiddleware::class
-// ]);
+$app->middleware([
+   Ushahidi\App\Http\Middleware\Authenticate::class
+]);
 
 // $app->routeMiddleware([
 //     'auth' => Ushahidi\App\Http\Middleware\Authenticate::class,
@@ -78,6 +78,8 @@ $app->routeMiddleware([
 $app->register(Ushahidi\App\Providers\AppServiceProvider::class);
 // $app->register(Ushahidi\App\Providers\AuthServiceProvider::class);
 // $app->register(Ushahidi\App\Providers\EventServiceProvider::class);
+$app->register(Laravel\Passport\PassportServiceProvider::class);
+$app->register(Dusterio\LumenPassport\PassportServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
